@@ -19,41 +19,48 @@
     ></script>
   </head>
   <body>
+    <header>
+<div class="header">
+    <h1>Weather Dashboard</h1>
+</div>
+    </header>
       <form class="search-form" id="search-form">
-    <div class="card">
-      <div class="search" type="submit" value="Search">
-        <input
-          type="text"
-          class="bar"
-          placeholder="Search City"
-          id="city-input"
-        />
-        <button>
-          <div class="bi bi-search">
-          <svg
-            xmlns="http://www.w3.org/2000/svg"
-            width="16"
-            height="16"
-            fill="currentColor"
-            class="bi bi-search"
-            viewBox="0 0 16 16"
-          >
-            <path
-              d="M11.742 10.344a6.5 6.5 0 1 0-1.397 1.398h-.001c.03.04.062.078.098.115l3.85 3.85a1 1 0 0 0 1.415-1.414l-3.85-3.85a1.007 1.007 0 0 0-.115-.1zM12 6.5a5.5 5.5 0 1 1-11 0 5.5 5.5 0 0 1 11 0z"
+    <div class="card"> 
+        <div class="search" type="submit" value="Search">
+            <input
+            type="text"
+            class="bar"
+            placeholder="Search City"
+            id="city-input"
             />
-          </svg>
-        </button>
-      </div>
-      <div class="box">
+            <button>
+                <div class="bi bi-search">
+                    <svg
+                    xmlns="http://www.w3.org/2000/svg"
+                    width="16"
+                    height="16"
+                    fill="currentColor"
+                    class="bi bi-search"
+                    viewBox="0 0 16 16"
+                    >
+                    <path
+                    d="M11.742 10.344a6.5 6.5 0 1 0-1.397 1.398h-.001c.03.04.062.078.098.115l3.85 3.85a1 1 0 0 0 1.415-1.414l-3.85-3.85a1.007 1.007 0 0 0-.115-.1zM12 6.5a5.5 5.5 0 1 1-11 0 5.5 5.5 0 0 1 11 0z"
+                    />
+                </svg>
+            </button>
+        </div>
+    </form>
+    <div class="box">
         <div class="cities">
-            <h1 id="city"></h1>
+            <h2 id="city"></h2>
             <h2 id="country"></h2>
             <h3 id="date"></h3>
         </div>
-        <div class="icon">
+        <div class="weather-temperature">
             <img id="icon">
+            <strong id="temperature"></strong>
         </div>
-        <div class="forecast">
+        <div class="data">
             <ul>
                 <li id="humidity"></li>
                 <li id="wind"></li>
@@ -61,8 +68,16 @@
                 <li id="description"></li>
             </ul>
         </div>
-      </div>
-      </div>
+        <div class="container" id="weather-forecast">
+            <div class="row">
+                <div class="col-3" ></div>
+                <div class="col-3"></div>
+                <div class="col-3"></div>
+                <div class="col-3"></div> 
+            </div>
+        </div>
+    </div>
+</div>
       <script src="./assets/js/script.js"></script>
   </body>
 </html>

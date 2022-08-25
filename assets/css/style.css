@@ -1,5 +1,41 @@
+* {
+  box-sizing: border-box;
+  padding: 0;
+  margin: 0;
+}
+
+.header {
+  text-align: center;
+  margin: 35px auto;
+  background-color: #77529e;
+  color: #cefff1;
+  border-radius: 50px;
+}
+
 .card {
   padding: 30px;
-  background-color: #c4c1e0;
+  background-color: #c3bef0;
   margin: 55px;
+}
+
+.search-form {
+  text-align: center;
+  margin: auto;
+  padding: 25px;
+  font-size: 20px;
+}
+button {
+  border-radius: 20px;
+  width: 55px;
+  height: 45px;
+  background: white;
+}
+ul li {
+  list-style: none;
+  color: #142d4c;
+  text-align: right;
+  font-size: 16px;
+}
+li:first-letter {
+  text-transform: capitalize;
 }

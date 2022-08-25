@@ -31,19 +31,21 @@ function getForecast(coordinates) {
   axios.get(apiUrl).then(displayForecast);
 }
 function displayTemperature(response) {
-  let temperatureElement = document.querySelector("#temperature");
-  let cityElement = document.querySelector("#city");
-  let countryElement = document.querySelector("#country");
+  let temperatureEl = document.querySelector("#temperature");
+  let cityEl = document.querySelector("#city");
+  let countryEl = document.querySelector("#country");
   let typedCity = document.querySelector("#city-input");
-  let humidityElement = document.querySelector("#humidity");
-  let windElement = document.querySelector("#wind");
-  let dateElement = document.querySelector("#date");
+  let humidityEl = document.querySelector("#humidity");
+  let windEl = document.querySelector("#wind");
+  let dateEl = document.querySelector("#date");
+  let visibilityEl = document.querySelector("#visibility");
 
-  cityElement.innerHTML = response.data.name;
-  countryElement.innerHTML = response.data.sys.country;
-  humidityElement.innerHTML = response.data.main.humidity;
-  windElement.innerHTML = Math.round(response.data.wind.speed);
-  dateElement.innerHTML = formatDate(response.data.dt * 1000);
+  cityEl.innerHTML = response.data.name;
+  countryEl.innerHTML = response.data.sys.country;
+  humidityEl.innerHTML = response.data.main.humidity;
+  visibilityEl.innerHTML = Math.round(response.data.visibility);
+  windEl.innerHTML = Math.round(response.data.wind.speed);
+  dateEl.innerHTML = formatDate(response.data.dt * 1000);
 
   getForecast(response.data.coord);
 }

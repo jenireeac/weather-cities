@@ -1,1 +1,1 @@
-# weather-cities
+# Weather App
